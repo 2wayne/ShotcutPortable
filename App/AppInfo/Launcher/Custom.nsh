@@ -15,10 +15,10 @@ ${Segment.OnInit}
 ${SegmentInit}
     ${If} $Bits = 64
         ${SetEnvironmentVariablesPath} FullAppDir $EXEDIR\App\Shotcut64
-		Rename "$EXEDIR\App\Shotcut\share\translations" "$EXEDIR\App\Shotcut64\share\translations"
+		Rename "$EXEDIR\App\Shotcut\share" "$EXEDIR\App\Shotcut64\share"
     ${Else}
         ${SetEnvironmentVariablesPath} FullAppDir $EXEDIR\App\Shotcut
-		Rename "$EXEDIR\App\Shotcut64\share\translations" "$EXEDIR\App\Shotcut\share\translations"
+		Rename "$EXEDIR\App\Shotcut64\share" "$EXEDIR\App\Shotcut\share"
     ${EndIf}
 	ExpandEnvStrings $1 "%PortableApps.comDocuments%"
 	${If} $1 == ""
